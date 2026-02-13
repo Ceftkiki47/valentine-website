@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background Audio -->
+  <!-- CHANGE MUSIC FILE HERE: Replace 'assets/music/bgm.mp3' with your file -->
+  <audio id="bg-music" loop>
+    <source src="assets/music/videoplayback.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="audio-toggle" class="audio-control" title="Mute/Unmute">
+    <span class="icon">🔊</span>
+  </button>
+
+  <!-- Abstract Watercolor Background -->
+  <div id="watercolor-bg">
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-navy"></div>
+    <div class="blob blob-yellow"></div>
+    <div class="blob blob-gray"></div>
+  </div>
+
+  <!-- Floating Hearts Background -->
+  <div id="hearts-container">
+    <!-- Hearts will be generated here by CSS/JS or just static HTML for simplicity -->
+    <div class="heart h1"></div>
+    <div class="heart h2"></div>
+    <div class="heart h3"></div>
+    <div class="heart h4"></div>
+    <div class="heart h5"></div>
+    <div class="heart h6"></div>
+  </div>
+
+  <!-- Navigation / Progress (Optional, keeping it clean for now) -->
+
+  <!-- PAGE 1: Entry / Personalized Welcome -->
+  <section id="page-entry" class="page active">
+    <div class="content-container">
+      <h1 class="fade-in">Welcome, Love</h1>
+      <p class="fade-in delay-1">
+        Kamu tau? ini First Web Valentine Aku lho. Khusus buat Kamu
+      </p>
+      <div class="input-group fade-in delay-2">
+        <input type="text" id="visitor-name" placeholder="Enter your name..." autocomplete="off" />
+        <button id="btn-enter">Enter Our Story</button>
+      </div>
+      <div class="running-text-container">
+        <div class="running-text">
+          Dulu... ketika warna hitam dan putih masih jadi basic hidup Aku...
+          Tapi ketika Kamu datang... Kamu jadi warna baru Aku...
+          Jadi warna favorit Aku...
+        </div>
+      </div>
+      <p class="error-msg" id="error-msg"></p>
+    </div>
+  </section>
+
+  <!-- PAGE 2: The Beginning -->
+  <section id="page-beginning" class="page">
+    <div class="content-container">
+      <h2 class="visitor-name-display"></h2>
+      <p class="romantic-text">
+        Apakah kamu tau? Kapan warna itu berubah? Dan kenapa?
+      </p>
+      <div class="photo-frame">
+        <!-- CHANGE PHOTO HERE: assets/images/beginning.png -->
+        <img src="assets/images/malabar.jpg" alt="The Beginning" />
+        <p class="caption">Segalanya berubah ketika Kamu datang.</p>
+      </div>
+      <button class="btn-next" data-next="page-journey">
+        Continue the Journey
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 3: The Journey -->
+  <section id="page-journey" class="page">
+    <div class="content-container">
+      <h2>Our Journey</h2>
+      <p class="romantic-text">
+        Setiap langkah yang pernah kita lalui bersama...
+        Itu mewarnai hidupku dengan warna baru.
+      </p>
+      <div class="gallery">
+        <div class="photo-frame">
+          <!-- CHANGE PHOTO HERE: assets/images/journey_1.png -->
+          <img src="assets/images/first_picture.jpg" alt="Journey Moment 1" />
+        </div>
+        <div class="photo-frame">
+          <!-- CHANGE PHOTO HERE: assets/images/journey_2.png -->
+          <img src="assets/images/villa_1.jpg" alt="Journey Moment 2" />
+        </div>
+      </div>
+      <p class="romantic-text">
+        Dari awal-awal yang cuman bisa liat dari jauh...
+        <br>
+        Yang hampir menjadi kita...
+        Setidaknya aku pernah memegang tangan hangat Kamu...
+      </p>
+      <button class="btn-next" data-next="page-meaning">
+        Sudah paham 'kan sejauh ini?
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 4: The Meaning -->
+  <section id="page-meaning" class="page">
+    <div class="content-container">
+      <h2>Why You?</h2>
+      <p class="romantic-text large-text">
+        "Basic hidup itu hitam putih...
+        itulah kenapa Aku milih Kamu sebagai warna di hidup Aku...
+        "
+      </p>
+      <div class="photo-frame large">
+        <!-- CHANGE PHOTO HERE: assets/images/meaning.png -->
+        <img src="assets/images/langit_biru.jpg" alt="Meaning of Color" />
+      </div>
+      <button class="btn-next" data-next="page-promise">
+        See My Promise
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 5: The Promise -->
+  <section id="page-promise" class="page">
+    <div class="content-container">
+      <h2>My Promise</h2>
+      <p class="romantic-text">
+        Aku harap... Kamu masih menjadi warna di hidupku...
+        <br>
+        Selalu ada di sampingmu...
+        <br>
+        Karena Aku ingin selamanya bersama Kamu...
+        <br>
+        Even itu sekarang mungkin susah... Namun hatiku tetap untuk Kamu
+      </p>
+      <div class="photo-frame">
+        <!-- CHANGE PHOTO HERE: assets/images/promise.png -->
+        <img src="assets/images/berdoa.jpg" alt="The Promise" />
+      </div>
+      <p class="date-display">February 14, 2026</p>
+      <div class="running-text-container">
+        <div class="running-text">
+          Aku akan tetap mencintai Kamu... Hingga Kamu mungkin berbalik badan dan menoleh kepadaku lagi...
+          Aku harap... Itu Kembali terjadi
+        </div>
+      </div>
+      <button class="btn-next" data-next="page-forever">Forever</button>
+    </div>
+  </section>
+
+  <!-- PAGE 6: Forever -->
+  <section id="page-forever" class="page">
+    <div class="content-container">
+      <h1>Stay with me?</h1>
+      <p class="romantic-text">
+        Aku akan tetap cinta Kamu selamanya,
+        <span class="visitor-name-span"></span>.
+      </p>
+      <button class="btn-next" data-next="page-stay">Answer Me</button>
+
+      <!-- Romantic Credits -->
+      <div class="romantic-credits">
+        <p>Cerita ini memang tak sempurna.</p>
+        <p>Isi kata nyata, perasaan yang berbicara.</p>
+        <p>
+          Ditulis perlahan, disertai dengan hati, dari orang yang memilih Kamu
+          — Yang selalu mencintai Kamu di setiap harinya.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 7: Stay With Me (Interactive) -->
+  <section id="page-stay" class="page">
+    <div class="content-container">
+      <h2>One Last Question</h2>
+      <p class="romantic-text">Will you stay and build this story with me?</p>
+      <div class="input-group">
+        <!-- CHANGE EMAIL ADDRESS IN JS/SCRIPT.JS -->
+        <textarea id="stay-message" placeholder="Write your answer here..." rows="4"></textarea>
+        <button id="btn-send-answer">Send My Answer</button>
+      </div>
+      <p class="success-msg" id="success-msg"></p>
+      <button id="btn-replay" style="
+            margin-top: 30px;
+            background: transparent;
+            color: #555;
+            border: 1px solid #ccc;
+          ">
+        Replay Our Story
+      </button>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" />
+    <div id="lightbox-caption"></div>
+  </div>
+
+  <!-- Final Closing Overlay -->
+  <div id="final-closing">
+    <div class="closing-message">
+      <p>Terima kasih karena telah lahir ke dunia ❤️</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
